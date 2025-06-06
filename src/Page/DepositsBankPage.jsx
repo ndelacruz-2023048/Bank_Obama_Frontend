@@ -3,6 +3,6 @@ import { DepositsBankTemplate } from '../components/template/DepositsBankTemplat
 
 export const DepositsBankPage = () => {
   return (
-    <DepositsBankTemplate />
+      <DepositsBankTemplate />
   )
 }
