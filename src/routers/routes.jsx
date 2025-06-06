@@ -6,6 +6,8 @@ import { ServicesBankPage } from '../Page/ServicesBankPage'
 import { ProductBankPage } from '../Page/ProductBankPage'
 import { TransactionBankPage } from '../Page/TransactionBankPage'
 import { TransactionBankFormPage } from '../Page/TransactionBankFormPage'
+import { ProfilePage } from '../Page/ProfilePage'
+import { ClientsBankPage } from '../Page/ClientsBankPage'
 
 const router  = createBrowserRouter([
     {
@@ -32,6 +34,14 @@ const router  = createBrowserRouter([
                 path:"transactions/new",
                 element:<TransactionBankFormPage/>
             },
+            {
+                path:"profile",
+                element:<ProfilePage/>
+            },
+            {
+                path:"clients",
+                element:<ClientsBankPage/>
+            }
         ]
     }
 ])
