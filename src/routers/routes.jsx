@@ -8,6 +8,7 @@ import { TransactionBankPage } from '../Page/TransactionBankPage'
 import { TransactionBankFormPage } from '../Page/TransactionBankFormPage'
 import { ProfilePage } from '../Page/ProfilePage'
 import { ClientsBankPage } from '../Page/ClientsBankPage'
+import { DepositsBankPage } from '../Page/DepositsBankPage'
 
 const router  = createBrowserRouter([
     {
@@ -41,7 +42,11 @@ const router  = createBrowserRouter([
             {
                 path:"clients",
                 element:<ClientsBankPage/>
-            }
+            },
+            {
+                path:"deposits",
+                element:<DepositsBankPage/>
+            },
         ]
     }
 ])
