@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { Layout } from '../layout/Layout'
 import { SummaryAccountPage } from '../Page/SummaryAccountPage'
 import { ServicesBankPage } from '../Page/ServicesBankPage'
+import { ProductBankPage } from '../Page/ProductBankPage'
 
 const router  = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ const router  = createBrowserRouter([
             },
             {
                 path:"products",
-                element:<ServicesBankPage/>
+                element:<ProductBankPage/>
             }
         ]
     }

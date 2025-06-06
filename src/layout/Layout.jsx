@@ -8,7 +8,7 @@ export const Layout = ({children}) => {
         <div className='bg-amber-500 w-1/5'>
             <Sidebar/>
         </div>
-        <div className='bg-sky-400 w-4/4'>
+        <div >
             {children ? children : <Outlet />}
         </div>
     </div>
