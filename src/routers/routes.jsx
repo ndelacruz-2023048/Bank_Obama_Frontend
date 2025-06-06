@@ -9,6 +9,7 @@ import { TransactionBankFormPage } from '../Page/TransactionBankFormPage'
 import { ProfilePage } from '../Page/ProfilePage'
 import { ClientsBankPage } from '../Page/ClientsBankPage'
 import { DepositsBankPage } from '../Page/DepositsBankPage'
+import { LoginPage } from '../Page/LoginPage'
 
 const router  = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ const router  = createBrowserRouter([
                 element:<DepositsBankPage/>
             },
         ]
+    },
+    {
+        path: '/Auth',
+        element: <LoginPage/>
     }
 ])
 
