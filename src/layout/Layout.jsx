@@ -6,7 +6,7 @@ export const Layout = ({children}) => {
   return (
     <div className='flex w-full h-screen'>
         <div className='bg-amber-500 w-1/5'>
-            <Sidebar/>
+          <Sidebar/>
         </div>
         <div >
             {children ? children : <Outlet />}
