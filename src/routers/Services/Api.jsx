@@ -19,3 +19,15 @@ export const loginRequest = async(user)=> {
         }
     }
 }
+
+//LOGOUT
+export const logoutRequest = async()=> {
+    try {
+        return await apiClient.post('/auth/logout')
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
