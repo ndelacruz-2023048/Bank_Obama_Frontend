@@ -10,11 +10,16 @@ import { ProfilePage } from '../Page/ProfilePage'
 import { ClientsBankPage } from '../Page/ClientsBankPage'
 import { DepositsBankPage } from '../Page/DepositsBankPage'
 import { LoginPage } from '../Page/LoginPage'
+import { ProtectedRoutes } from '../hooks/ProtectedRoutes'
 
 const router  = createBrowserRouter([
     {
         path:"/",
-        element:<Layout/>,
+        element:(
+            <ProtectedRoutes accesBy="authenticated">
+                <Layout/>
+            </ProtectedRoutes>
+        ),
         children:[
             {
                 path:"",
@@ -51,8 +56,12 @@ const router  = createBrowserRouter([
         ]
     },
     {
-        path: '/Auth',
-        element: <LoginPage/>
+        path: '/login',
+        element: (
+            <ProtectedRoutes accesBy="non-authenticated">
+                <LoginPage/>
+            </ProtectedRoutes>
+        )
     }
 ])
 

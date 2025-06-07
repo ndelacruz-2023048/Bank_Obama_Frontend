@@ -1,0 +1,21 @@
+import axios from "axios"
+
+const apiClient = axios.create(
+    {
+        baseURL: 'http://localhost:60600/v1/banckobama',
+        withCredentials: true,
+        timeout: 2000
+    }
+)
+
+//lOGIN
+export const loginRequest = async(user)=> {
+    try {
+        return await apiClient.post('/auth/login', user)
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
