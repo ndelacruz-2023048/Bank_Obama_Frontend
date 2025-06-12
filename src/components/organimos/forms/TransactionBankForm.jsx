@@ -2,7 +2,7 @@ import React from 'react';
 
 export const TransactionBankForm = () => {
   return (
-    <div className="min-h-screen min-w-screen bg-gray-900 text-white p-1">  
+    <div className="min-h-screen bg-gray-900 text-white p-1 w-[80vw]">  
       {/* Form */}
       <div className="max-w-md mx-auto mt-12 p-6 bg-gray-900">
         <h2 className="text-2xl font-semibold mb-6">Make a Transfer</h2>

@@ -11,6 +11,7 @@ import { ClientsBankPage } from '../Page/ClientsBankPage'
 import { DepositsBankPage } from '../Page/DepositsBankPage'
 import { LoginPage } from '../Page/LoginPage'
 import { ProtectedRoutes } from '../hooks/ProtectedRoutes'
+import { RegisterForm } from '../components/organimos/forms/RegisterForm'
 
 const router  = createBrowserRouter([
     {
@@ -62,7 +63,11 @@ const router  = createBrowserRouter([
                 <LoginPage/>
             </ProtectedRoutes>
         )
-    }
+    },
+    {
+        path:"register",
+        element:<RegisterForm/>
+    },
 ])
 
 

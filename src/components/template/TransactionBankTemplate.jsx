@@ -2,7 +2,7 @@ import React from 'react';
 
 export const TransactionBankTemplate = () => {
   return (
-    <div className="min-h-screen min-w-screen bg-gray-900 text-white p-8">
+    <div className="min-h-screen bg-gray-900 text-white p-8 w-[80vw]">
       <h1 className="text-3xl font-bold mb-2">Transactions</h1>
       <p className="text-gray-400 mb-6">Vee y maneja tus transacciones recientes.</p>
 

@@ -1,8 +1,10 @@
 import { useForm } from 'react-hook-form'
 import { useLogin } from '../../../hooks/useLogin'
+import { useNavigate } from 'react-router'
 
 export const LoginForm = () => {
   const { login } = useLogin()
+  const navigate = useNavigate()
   const { register, handleSubmit, formState: {errors}, reset} = useForm(
     {
       mode: 'onChange'
@@ -13,6 +15,11 @@ export const LoginForm = () => {
     console.log(data);
     await login(data)
     reset()
+  }
+
+  const goToRegisterForm=()=>{
+    navigate('/register')
+    console.log('Hola')
   }
     return (
     <div className="bg-white rounded-lg shadow-lg ml-50 mt-50 h-100 w-100 p-8" >
@@ -74,9 +81,16 @@ export const LoginForm = () => {
         >
           login
         </button>
-
       </form>
-
+            <br/>
+      <button onClick={goToRegisterForm}
+          className='w-full justify-center py-1 bg-blue-300 hover:bg-blue-400 active:bg-blue-300 rounded-md text-white ring-2'
+          id="register"
+          name='register'
+          type='submit'
+        >
+          Registrarse
+        </button>
     </div>
   )
 }
